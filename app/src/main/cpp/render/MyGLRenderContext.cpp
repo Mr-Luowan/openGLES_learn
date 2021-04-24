@@ -37,6 +37,7 @@ void MyGLRenderContext::OnSurfaceCreated() {
     LOG_D("设置背景颜色红色");
     glClearColor(1.0, 1.0, 1.0, 1.0);
     LOG_D("设置背景颜色红色  完成");
+    mSample = new TriangleSample();
 }
 
 void MyGLRenderContext::OnSurfaceChanged(int width, int height) {
@@ -45,9 +46,6 @@ void MyGLRenderContext::OnSurfaceChanged(int width, int height) {
 
 void MyGLRenderContext::OnDrawFrame() {
     glClear(GL_COLOR_BUFFER_BIT);
-    if (!mSample) {
-        mSample = new TriangleSample();
-    }
     mSample->draw();
 }
 

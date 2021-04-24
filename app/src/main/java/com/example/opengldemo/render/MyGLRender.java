@@ -18,11 +18,9 @@ public class MyGLRender implements GLSurfaceView.Renderer {
 
     public MyGLRender(MyNativeRender nativeRender) {
         mNativeRender = nativeRender;
-    }
-
-    public void init() {
         mNativeRender.native_OnInit();
     }
+
 
     @Override
     public void onSurfaceCreated(GL10 gl, EGLConfig config) {

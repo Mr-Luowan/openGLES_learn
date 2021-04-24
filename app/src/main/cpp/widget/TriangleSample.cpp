@@ -47,7 +47,6 @@ void TriangleSample::draw() {
         LOG_D("程序%d初始化失败", m_ProgramObj);
         return;
     }
-    LOG_D("使用程序%d成功", m_ProgramObj);
     glUseProgram(m_ProgramObj);
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, vVertices);
     glEnableVertexAttribArray(0);
